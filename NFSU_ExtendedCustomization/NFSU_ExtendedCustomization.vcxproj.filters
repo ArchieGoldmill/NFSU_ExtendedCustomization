@@ -13,10 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Features">
+      <UniqueIdentifier>{69064896-02c3-483b-8e31-29dcac64b777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\ColorPicker">
+      <UniqueIdentifier>{31ec59a9-8ceb-48f3-abd1-9f2cff66c669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Engine">
+      <UniqueIdentifier>{8e132461-207f-4836-82b5-00ae92009d6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Features\Rims">
+      <UniqueIdentifier>{e58e6111-adb7-41a4-8d5b-9b71ea15b412}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ColorPicker.cpp">
+      <Filter>Features\ColorPicker</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Features\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Rims.cpp">
+      <Filter>Features\Rims</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ColorPicker.h">
+      <Filter>Features\ColorPicker</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Features\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Rims.h">
+      <Filter>Features\Rims</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
