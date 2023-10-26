@@ -50,12 +50,22 @@ void Init()
 		InitColorPicker();
 	}
 
+	if (ini.ReadInteger("GENERAL", "UnlockAllDecals", 0) == 1)
+	{
+		injector::WriteMemory(0x00512223, 0x75C08500000001B8, true);
+	}
+
 	// Lods
 	int* CarLod = (int*)0x006F1B30;
 	int* WheelLod = (int*)0x006F1B34;
 	int lod = ini.ReadInteger("GENERAL", "ForceLod", -1);
 	*CarLod = lod;
 	*WheelLod = lod;
+
+	if (ini.ReadInteger("GENERAL", "ResoreBrakeLodInRace", 0) == 1)
+	{
+		injector::WriteMemory(0x005702F5, 0x8D90C930, true);
+	}
 }
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReserved)

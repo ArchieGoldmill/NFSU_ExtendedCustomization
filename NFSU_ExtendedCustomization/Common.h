@@ -1,15 +1,15 @@
 #pragma once
 #include "includes/injector/injector.hpp"
 
-struct ListItem
+struct Node
 {
-	ListItem* Next;
-	ListItem* Prev;
+	Node* Next;
+	Node* Prev;
 	int Value;
 };
 
 struct List
 {
-	ListItem* Head;
-	ListItem* Tail;
+	Node* Head;
+	Node* Tail;
 };

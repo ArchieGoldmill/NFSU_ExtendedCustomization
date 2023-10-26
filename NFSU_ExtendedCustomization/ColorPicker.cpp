@@ -30,12 +30,12 @@ static auto free_0 = (void* (__cdecl*)(int))0x00671102;
 int NumColors;
 void AddListItem(List* list, PAINT_TYPE value)
 {
-	auto newItem = (ListItem*)malloc_0(12);
+	auto newItem = (Node*)malloc_0(sizeof(Node));
 	newItem->Value = (int)value;
 
 	auto last = list->Tail;
 	newItem->Prev = last;
-	newItem->Next = (ListItem*)list;
+	newItem->Next = (Node*)list;
 	last->Next = newItem;
 	list->Tail = newItem;
 
